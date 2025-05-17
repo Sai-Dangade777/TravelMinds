@@ -25,7 +25,7 @@ import { getLocationImageUrl, batchProcessImages } from '../service/GlobalApi'; 
 
 const apiKey = import.meta.env.VITE_GOOGLE_PLACE_API_KEY; 
 
-function CreateTrip() {
+function                                                                                                                                CreateTrip() {
   const [place, setPlace] = useState();
   const [formData, setFormData] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);

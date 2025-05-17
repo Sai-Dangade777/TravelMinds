@@ -1,5 +1,5 @@
 // Place search using OpenStreetMap Nominatim API
-import { fetchLocationImage } from './UnsplashService';
+import { fetchLocationImage, batchFetchImages } from './PexelsService';
 
 /**
  * Search for places using OpenStreetMap Nominatim.
