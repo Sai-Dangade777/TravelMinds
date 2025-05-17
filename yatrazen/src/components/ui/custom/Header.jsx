@@ -90,10 +90,11 @@ function Header() {
       <Dialog open={openDialog} onOpenChange={handleCloseDialog} > 
             <DialogContent>
               <DialogHeader>
+                <DialogTitle>Sign In</DialogTitle>
                 <DialogDescription>
-                <img src="/yatrazen.png" className="h-[20px]" alt="" />
+                  <img src="/yatrazen.png" className="h-[20px]" alt="" />
                   <h2 className='font-bold text-lg mt-7'>Sign In With Google</h2>
-                  <p>Sign in to the app with google authentication securely</p>
+                  <span>Sign in to the app with google authentication securely</span>
                   <Button
                     disabled={loading}
                     onClick={login}

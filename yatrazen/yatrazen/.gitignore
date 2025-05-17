@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+lerna-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+firebaseConfig.jsx
+
+# Ignore sensitive files
+VITE_FIREBASE_API_KEY=AIzaSyCMwLDyZwKUUE69Tl9j2yjqdvQclWfo4KU.sh
+VITE_OPENROUTER_API_KEY=*.sh
+firebaseConfig.jsx
+.env.local
+
+# Build files
+dist/
+dist-ssr
+build/
+coverage/
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Firebase cache
+.firebase/
