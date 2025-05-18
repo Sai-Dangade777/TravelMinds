@@ -4,9 +4,12 @@
   if (window.googleMapsInitialized) return;
   window.googleMapsInitialized = true;
   
+  // Get the API key from the window object (will be set in your main HTML)
+  const apiKey = window.GOOGLE_MAPS_API_KEY || '';
+  
   // Create a script element to load the Maps API
   const script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initGoogleMapsAPI&v=3';
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initGoogleMapsAPI&v=3`;
   script.async = true;
   script.defer = true;
   

@@ -2,8 +2,13 @@
  * Service for fetching images from Pexels API - a free image provider
  */
 
-// Pexels API key - get yours at https://www.pexels.com/api/
-const PEXELS_API_KEY = import.meta.env.VITE_PEXELS_API_KEY || 'TkeBvYAznXPEV1TkiZ1LsZmsnqBOBva5EVdSDtvhn0VMHf5PWIqwpqQn';
+// Pexels API key from environment variables
+const PEXELS_API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
+
+// Warn if API key is missing
+if (!PEXELS_API_KEY) {
+  console.warn('No Pexels API key found. Image fetching will likely fail. Set VITE_PEXELS_API_KEY in your .env.local file.');
+}
 
 // Cache constants
 const CACHE_KEY = 'yatrazen_pexels_cache';
