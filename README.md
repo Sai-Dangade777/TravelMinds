@@ -30,6 +30,7 @@ VITE_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
 VITE_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
 VITE_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id
 VITE_PUBLIC_FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id
+VITE_PEXELS_API_KEY=your_pexel_api_key
 ```
 
 **Important:**
