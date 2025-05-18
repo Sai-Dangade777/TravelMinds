@@ -1,4 +1,4 @@
-# YatraZen - AI-Based Trip Planner
+# TravelMinds - AI-Based Trip Planner
 
 ## 🚀 Project Setup
 
