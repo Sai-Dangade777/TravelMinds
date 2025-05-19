@@ -19,7 +19,7 @@ import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 import { doc, setDoc } from "firebase/firestore"; 
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
-import { db } from '../service/firebaseConfig';
+import { db } from 'service/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import { getLocationImageUrl, batchProcessImages } from '../service/GlobalApi'; // Add this import
 
