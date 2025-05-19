@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "cd yatrazen && npm install && npm run build",
+  "outputDirectory": "yatrazen/dist"
+}
