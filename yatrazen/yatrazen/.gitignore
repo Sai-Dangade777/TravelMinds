@@ -12,12 +12,12 @@ lerna-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
-firebaseConfig.jsx
+#firebaseConfig.jsx
 
 # Ignore sensitive files
 VITE_FIREBASE_API_KEY=AIzaSyCMwLDyZwKUUE69Tl9j2yjqdvQclWfo4KU.sh
 VITE_OPENROUTER_API_KEY=*.sh
-firebaseConfig.jsx
+#firebaseConfig.jsx
 .env.local
 
 # Build files

@@ -12,7 +12,7 @@ lerna-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
-firebaseConfig.jsx 
+#firebaseConfig.jsx 
 
 # Build files
 dist/
