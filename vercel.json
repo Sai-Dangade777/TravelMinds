@@ -2,6 +2,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "buildCommand": "cd yatrazen && npm install && npm run build",
+  "buildCommand": "cd yatrazen && mkdir -p src/my-trips/service && cp src/service/firebaseConfig.jsx src/my-trips/service/ && npm install && npm run build",
   "outputDirectory": "yatrazen/dist"
 }
