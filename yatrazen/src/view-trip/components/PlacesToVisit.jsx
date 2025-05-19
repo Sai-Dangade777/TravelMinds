@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PlaceCardItem from './PlaceCardItem';
-import Map from '../../components/Map';
+import LeafletMap from "@/components/LeafletMap";
 import { formatPlacesForMap } from '../../utils/mapUtils';
 
 function PlacesToVisit({ trip }) {
@@ -23,7 +23,11 @@ function PlacesToVisit({ trip }) {
   const dayPlaces = getAllPlacesForSelectedDay();
   
   // Format places for map
-  const mapLocations = formatPlacesForMap(dayPlaces);
+  const mapLocations = dayPlaces.map((place) => ({
+    name: place.name,
+    lat: parseFloat(place.lat),
+    lng: parseFloat(place.lng),
+  }));
   
   return (
     <div>
@@ -55,7 +59,7 @@ function PlacesToVisit({ trip }) {
         <div className="mb-6 border rounded-lg p-2 shadow-sm">
           <h3 className="text-sm text-gray-600 mb-2">Day {itinerary[selectedDay]?.day} Map Overview:</h3>
           <div className="h-[400px]">
-            <Map locations={mapLocations} />
+            <LeafletMap locations={mapLocations} center={[20.5937, 78.9629]} zoom={12} />
           </div>
         </div>
       )}
@@ -78,7 +82,7 @@ function PlacesToVisit({ trip }) {
           {selectedDay === null && item.places && item.places.length > 0 && (
             <div className="mb-4 mt-2">
               <div className="h-[250px] rounded-lg overflow-hidden">
-                <Map locations={formatPlacesForMap(item.places)} />
+                <LeafletMap locations={formatPlacesForMap(item.places)} center={[20.5937, 78.9629]} zoom={12} />
               </div>
             </div>
           )}
