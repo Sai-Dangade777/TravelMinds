@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Map from './Map';
+import React from 'react';
+import LeafletMap from './LeafletMap';
 
 function MapModal({ isOpen, onClose, location, title }) {
   if (!isOpen) return null;
@@ -18,9 +18,9 @@ function MapModal({ isOpen, onClose, location, title }) {
         </div>
         
         <div className="h-[500px] w-full">
-          <Map 
+          <LeafletMap 
             locations={location ? [location] : []} 
-            center={location ? { lat: parseFloat(location.lat), lng: parseFloat(location.lng) } : null}
+            center={location ? [parseFloat(location.lat), parseFloat(location.lng)] : undefined}
             zoom={15}
           />
         </div>

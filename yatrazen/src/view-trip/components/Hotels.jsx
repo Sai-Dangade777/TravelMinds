@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HotelCardItem from './HotelCardItem';
-import Map from '../../components/Map';
+import LeafletMap from '@/components/LeafletMap';
 import { formatHotelsForMap } from '../../utils/mapUtils';
 
 function Hotels({ trip }) {
@@ -21,8 +21,8 @@ function Hotels({ trip }) {
       </div>
       
       {showMap && mapLocations.length > 0 && (
-        <div className="mb-4">
-          <Map locations={mapLocations} />
+        <div className="mb-4 h-[400px]">
+          <LeafletMap locations={mapLocations} />
         </div>
       )}
       
