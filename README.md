@@ -47,5 +47,5 @@ If deploying to **Vercel, Netlify, or Firebase Hosting**, make sure to add these
 
 ---
 
-✅ You’re all set! Enjoy using **YatraZen - AI-Based Trip Planner** 🚀
+✅ You’re all set! Enjoy using TravelMinds - AI-Based Trip Planner 🚀
 
