@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { IoIosSend } from "react-icons/io";
 import { TRIP_PHOTO_URL, getLocationImageUrl } from '../../service/GlobalApi';
+import SocialShare from '../../components/SocialShare'; // Import the new component
 
 function InfoSection({ trip }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,7 +57,15 @@ function InfoSection({ trip }) {
             <h2 className='p-1 px-3 bg-gray-200 rounded-full text-gray-500 font-bold text-xs md:text-md'>🥂 No. Of Travelers: {trip?.userSelection?.traveler} </h2>
           </div>
         </div>
-        <Button><IoIosSend /></Button>
+        <div className="flex gap-2">
+          {/* Social Share Button */}
+          <SocialShare 
+            title={`My ${trip?.userSelection?.noOfDays}-day trip to ${trip?.userSelection?.location?.label}`}
+            description={`Check out my ${trip?.userSelection?.budget} budget trip plan for ${trip?.userSelection?.location?.label} with YatraZen!`}
+            imageUrl={imageUrl}
+          />
+          <Button><IoIosSend /></Button>
+        </div>
       </div>
     </div>
   );
