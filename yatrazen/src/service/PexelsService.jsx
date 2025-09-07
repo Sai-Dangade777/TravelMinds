@@ -94,14 +94,10 @@ export async function fetchLocationImage(location, options = {}) {
     // Build search query
     const query = `${location} ${options.query || 'travel landmark'}`;
     
-    // Fetch from Pexels with CORS proxy
+    // Fetch from Pexels directly
     const apiUrl = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=${options.orientation || 'landscape'}`;
     
-    // Use CORS proxy to avoid CORS errors
-    const corsProxyUrl = 'https://corsproxy.io/?';
-    
-    // Try with proxy
-    const response = await fetchWithRetry(corsProxyUrl + encodeURIComponent(apiUrl), {
+    const response = await fetchWithRetry(apiUrl, {
       headers: {
         'Authorization': PEXELS_API_KEY
       }

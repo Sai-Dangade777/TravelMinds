@@ -122,7 +122,8 @@ function                                                                        
       }
       
       // Parse trip data
-      const tripDataObj = JSON.parse(TripData);
+      const cleanedTripData = TripData.replace(/```json\n?|```/g, '').trim();
+      const tripDataObj = JSON.parse(cleanedTripData);
       
       // Get a location image URL for the main trip
       let locationImageUrl = null;

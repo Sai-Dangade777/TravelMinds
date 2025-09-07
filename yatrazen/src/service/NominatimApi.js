@@ -21,8 +21,8 @@ export async function searchPlaces(query) {
       console.log("Direct request failed, trying proxy...");
     }
     
-    // Method 2: Try using a reliable CORS proxy
-    const proxyUrl = 'https://corsproxy.io/?';
+    // Method 2: Try using a different reliable CORS proxy
+    const proxyUrl = 'https://api.allorigins.win/raw?url=';
     const response = await fetch(proxyUrl + encodeURIComponent(directUrl), {
       headers: {
         'Accept-Language': 'en'

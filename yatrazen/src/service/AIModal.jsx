@@ -30,7 +30,7 @@ export const chatSession = {
           'X-Title': 'YatraZen Trip Planner'
         },
         body: JSON.stringify({
-          model: "anthropic/claude-3-haiku", // Most affordable but good model
+          model: "deepseek/deepseek-chat-v3.1:free", // Free model
           messages: [{ role: "user", content: prompt }],
           temperature: 0.7,
           max_tokens: 4000
